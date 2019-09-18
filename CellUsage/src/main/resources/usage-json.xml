@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<report name="report">
+    <templates>
+        <template code="DEFAULT" documentName="UsageReport.docx" documentPath="./src/main/resources/UsageReport.docx" outputType="pdf" 
+        outputNamePattern="usage.pdf"/>
+    </templates>
+    
+    <rootBand name="Root" orientation="H">
+        <bands>
+            <band name="Main" orientation="H">
+                <queries>
+                    <query name="Main" type="json">
+                        <script>
+                            parameter=param1 $.main
+                        </script>
+                    </query>
+                </queries>
+            </band>
+            <band name="Items" orientation="H">
+                <queries>
+                    <query name="Main" type="json">
+                        <script>
+                            parameter=param1 $.items
+                        </script>
+                    </query>
+                </queries>
+            </band>
+        </bands>
+        <queries/>
+    </rootBand>
+</report>
